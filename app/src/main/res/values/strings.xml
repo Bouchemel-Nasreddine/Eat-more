@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">Eat more</string>
+    <string name="login">Log In</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="enter_email_or_username">Enter email or username</string>
+    <string name="password">Password</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="or">or</string>
+    <string name="confirm_password">Confirm password</string>
+    <string name="open_nav_drawer">open navigation drawer</string>
+    <string name="close_nav_drawer">close navigation drawer</string>
+    <string name="chose_food">Chose the</string>
+    <string name="you_love">Food you love</string>
+    <string name="search_for_a_food_item">Search for a food item</string>
+    <string name="categories">Categories</string>
+    <string name="burger">burger</string>
+    <string name="email">Email</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="user_id">User ID</string>
+    <string name="log_out">Log Out</string>
+    <string name="verify_email"><u>verify email!</u></string>
+    <string name="current_password">current password</string>
+    <string name="confirm">confirm</string>
+</resources>

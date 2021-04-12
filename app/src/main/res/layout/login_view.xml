@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/login_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_constraintHeight_percent=".6"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintRight_toRightOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/authentication_logo"
+    app:layout_constraintWidth_percent=".7">
+
+
+    <EditText
+        android:id="@+id/login_email_edit_text"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="80dp"
+        android:fontFamily="@font/poppins"
+        android:hint="@string/enter_email_or_username"
+        android:textSize="12sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent=".8" />
+
+    <EditText
+        android:id="@+id/login_password_edit_text"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:hint="@string/password"
+        android:inputType="textPassword"
+        android:textSize="12sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/login_email_edit_text"
+        app:layout_constraintWidth_percent=".8" />
+
+    <TextView
+        android:id="@+id/forgot_password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins"
+        android:text="@string/forgot_password"
+        android:textColor="@color/text_grey"
+        android:textSize="10sp"
+        app:layout_constraintRight_toRightOf="@id/login_password_edit_text"
+        app:layout_constraintTop_toBottomOf="@id/login_password_edit_text" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/login_button"
+        android:layout_width="0dp"
+        android:layout_height="44dp"
+        android:background="@drawable/pink_rectangle"
+        android:elevation="0dp"
+        android:fontFamily="@font/poppins_semibold"
+        android:text="@string/login"
+        android:textAllCaps="false"
+        app:backgroundTint="@color/pink"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/login_email_edit_text"
+        app:layout_constraintWidth_percent=".8" />
+
+
+    <TextView
+        android:id="@+id/or"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/or"
+        android:textAllCaps="true"
+        app:layout_constraintBottom_toTopOf="@id/login_twitter"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/login_button" />
+
+    <ImageView
+        android:id="@+id/login_facebook"
+        android:layout_width="47dp"
+        android:layout_height="46dp"
+        android:background="@drawable/facebook_button"
+        android:padding="10dp"
+        android:src="@drawable/facebook"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/login_twitter"
+        app:layout_constraintTop_toBottomOf="@id/or" />
+
+    <ImageView
+        android:id="@+id/login_twitter"
+        android:layout_width="47dp"
+        android:layout_height="46dp"
+        android:background="@drawable/facebook_button"
+        android:padding="10dp"
+        android:src="@drawable/twitter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/login_facebook"
+        app:layout_constraintRight_toLeftOf="@id/login_google"
+        app:layout_constraintTop_toBottomOf="@id/or" />
+
+    <ImageView
+        android:id="@+id/login_google"
+        android:layout_width="47dp"
+        android:layout_height="46dp"
+        android:background="@drawable/facebook_button"
+        android:padding="10dp"
+        android:src="@drawable/google"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/login_twitter"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/or" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
