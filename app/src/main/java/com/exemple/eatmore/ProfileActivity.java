@@ -2,6 +2,7 @@ package com.exemple.eatmore;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.util.DisplayMetrics;
@@ -11,6 +12,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.Nullable;
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.bumptech.glide.Glide;
@@ -32,6 +34,7 @@ public class ProfileActivity extends AppCompatActivity {
         setContentView(R.layout.activity_profile);
 
         FirebaseUtils.reloadUser();
+        FirebaseUtils.setUser();
 
         user = FirebaseUtils.user;
         user.setVerifiedEmail(FirebaseUtils.checkEmailVerification());
@@ -95,6 +98,7 @@ public class ProfileActivity extends AppCompatActivity {
 
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.N)
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
@@ -128,6 +132,7 @@ public class ProfileActivity extends AppCompatActivity {
         user_ID.setText(String.valueOf(user.getUser_ID()));
         Glide.with(getApplicationContext())
                 .load(user.getPicture())
+                .placeholder(R.drawable.loading)
                 .centerCrop()
                 .signature(new ObjectKey(2000))
                 .into(picture);

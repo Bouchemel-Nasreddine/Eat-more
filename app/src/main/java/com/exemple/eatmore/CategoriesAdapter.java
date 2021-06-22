@@ -1,4 +1,4 @@
-package com.exemple.eatmore;
+ package com.exemple.eatmore;
 
 import android.view.LayoutInflater;
 import android.view.View;

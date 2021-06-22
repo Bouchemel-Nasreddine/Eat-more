@@ -21,6 +21,8 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.signature.ObjectKey;
 import com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton;
 import com.google.android.material.imageview.ShapeableImageView;
 import com.google.android.material.navigation.NavigationView;
@@ -166,6 +168,13 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                         .setAction("Action", null).show();
             }
         });
+
+        Glide.with(getApplicationContext())
+                .load(FirebaseAuth.getInstance().getCurrentUser().getPhotoUrl())
+                .placeholder(R.drawable.loading)
+                .centerCrop()
+                .signature(new ObjectKey(2000))
+                .into(profile);
 
     }
 
